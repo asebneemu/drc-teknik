@@ -1,0 +1,227 @@
+@import "tailwindcss";
+
+/* GENEL RESET */
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background: #f7f9fc;
+  color: #111827;
+}
+
+/* Link renklerini global sabitle */
+nav a,
+nav a span,
+nav a svg {
+  color: #000;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* TOPBAR */
+.topbar-shell {
+  position: relative;
+  width: 100%;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(37, 99, 235, 0.22), transparent 30%),
+    radial-gradient(circle at 80% 10%, rgba(14, 165, 233, 0.16), transparent 28%),
+    linear-gradient(90deg, #030712 0%, #07111f 50%, #030712 100%);
+}
+
+.topbar-glass {
+  position: relative;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    0 8px 24px rgba(0, 0, 0, 0.22);
+}
+
+.topbar-glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    115deg,
+    rgba(255, 255, 255, 0.12) 0%,
+    rgba(255, 255, 255, 0.04) 22%,
+    rgba(255, 255, 255, 0.09) 48%,
+    rgba(255, 255, 255, 0.03) 72%,
+    rgba(255, 255, 255, 0.08) 100%
+  );
+  pointer-events: none;
+}
+
+.light-line {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  overflow: hidden;
+  background: linear-gradient(
+    90deg,
+    rgba(37, 99, 235, 0.18) 0%,
+    rgba(96, 165, 250, 0.42) 50%,
+    rgba(37, 99, 235, 0.18) 100%
+  );
+  box-shadow:
+    0 0 10px rgba(59, 130, 246, 0.25),
+    0 0 22px rgba(59, 130, 246, 0.12);
+}
+
+.light-line::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -22%;
+  width: 22%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(147, 197, 253, 0.55) 18%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(147, 197, 253, 0.55) 82%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  filter: blur(1.6px);
+  box-shadow:
+    0 0 12px rgba(255, 255, 255, 0.9),
+    0 0 24px rgba(96, 165, 250, 0.9),
+    0 0 36px rgba(59, 130, 246, 0.8);
+  animation: beamMove 3.2s ease-in-out infinite alternate;
+}
+
+@keyframes beamMove {
+  0% {
+    left: -22%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* AUTHORIZED SECTION */
+.authorized-section {
+  position: relative;
+  width: 100%;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/service-bg-2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.authorized-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.authorized-inner {
+  position: relative;
+  z-index: 2;
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.authorized-logo-wrap {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.authorized-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  transform: scale(2.4);
+  transform-origin: center;
+  display: block;
+}
+
+.authorized-title {
+  color: white;
+  font-family: "Libre Baskerville", serif;
+  font-size: clamp(1rem, 3vw, 3rem);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.authorized-service-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.authorized-service-image {
+  width: 40%;
+  max-width: 420px;
+  object-fit: contain;
+}
+
+/* NAVBAR */
+.navbar {
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: black;
+}
+
+.navbar::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -120px;
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  filter: blur(2px);
+  animation: navbarBeam 3.5s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes navbarBeam {
+  from {
+    left: -120px;
+  }
+  to {
+    left: 100%;
+  }
+}

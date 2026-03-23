@@ -6,8 +6,8 @@ import {
   IconArticle,
   IconPhone,
 } from "@tabler/icons-react";
-
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const leftLinks = [
   { label: "Anasayfa", href: "/", icon: IconHome },
@@ -25,8 +25,8 @@ function NavItem({ item, className = "" }) {
   const Icon = item.icon;
 
   return (
-    <a
-      href={item.href}
+    <Link
+      to={item.href}
       className={`group flex items-center gap-2 py-3 text-[18px] font-normal text-black no-underline ${className}`}
     >
       <span className="text-black">{item.label}</span>
@@ -35,7 +35,7 @@ function NavItem({ item, className = "" }) {
         stroke={1.5}
         className="text-black transition-transform duration-300 group-hover:translate-x-1"
       />
-    </a>
+    </Link>
   );
 }
 
@@ -55,7 +55,6 @@ export default function Navbar() {
           : {}
       }
     >
-      {/* Resim yoksa fallback */}
       <img
         src="/navbar-bg.jpg"
         style={{ display: "none" }}
@@ -76,13 +75,13 @@ export default function Navbar() {
         </div>
 
         {/* Logo */}
-        <a href="/" className="mx-12 flex shrink-0 items-center justify-center">
+        <Link to="/" className="mx-12 flex shrink-0 items-center justify-center">
           <img
             src="/logo.png"
             alt="DRC Teknik"
             className="h-32 w-auto object-contain"
           />
-        </a>
+        </Link>
 
         {/* Sağ */}
         <div className="flex flex-1 items-center justify-end gap-10">

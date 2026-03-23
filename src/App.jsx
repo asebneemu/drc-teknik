@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import HomePage from "./pages/HomePage";
 import AboutUsPage from "./pages/AboutUsPage";
 import ProductsPage from "./pages/ProductsPage";
-
+import ServicesPage from "./pages/ServicesPage";
 
 export default function App() {
   return (
@@ -13,6 +13,7 @@ export default function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/kurumsal" element={<AboutUsPage />} />
         <Route path="/urunler" element={<ProductsPage />} />
+        <Route path="/hizmetler" element={<ServicesPage />} />
       </Routes>
     </Router>
   );

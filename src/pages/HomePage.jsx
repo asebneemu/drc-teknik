@@ -6,17 +6,22 @@ import ExperienceHighlightSection from "../components/ExperienceHighlightSection
 import WhatsAppCTASection from "../components/WhatsAppCTASection";
 import BlogSection from "../components/BlogSection";
 import FooterSection from "../components/FooterSection";
+import ExperienceContactSection from "../components/ExperienceContactSection";
+import ContactSection from "../components/ContactSection";
+
+
 
 const HomePage = () => {
   return (
-    <div className="min-h-screen w-full bg-[#f7f9fc]">
+    <div className="min-h-screen w-full bg-[#d8dee6]">
       <HeroVideo />
       <TripleShowcase />
       <GlassInfoSection />
-      <ExperienceHighlightSection />
-      <WhatsAppCTASection />
+      <ExperienceContactSection />
       <BlogSection />
+      <ContactSection />
       <FooterSection />
+
     </div>
   );
 };

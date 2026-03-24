@@ -6,7 +6,6 @@ import {
   IconArticle,
   IconPhone,
 } from "@tabler/icons-react";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const leftLinks = [
@@ -27,43 +26,32 @@ function NavItem({ item, className = "" }) {
   return (
     <Link
       to={item.href}
-      className={`group flex items-center gap-2 py-3 text-[18px] font-normal text-black no-underline ${className}`}
+      className={`group flex items-center gap-2 py-3 text-[18px] font-semibold !text-[#f5f1e8] no-underline transition-all duration-300 hover:!text-blue-200 ${className}`}
     >
-      <span className="text-black">{item.label}</span>
+      <span className="relative !text-[#f5f1e8] tracking-wide">
+        {item.label}
+        <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-blue-300 transition-all duration-300 group-hover:w-full"></span>
+      </span>
+
       <Icon
         size={22}
-        stroke={1.5}
-        className="text-black transition-transform duration-300 group-hover:translate-x-1"
+        stroke={1.8}
+        className="!text-[#f5f1e8] transition-all duration-300 group-hover:translate-x-1 group-hover:scale-110"
       />
     </Link>
   );
 }
 
 export default function Navbar() {
-  const [hasBg, setHasBg] = useState(true);
-
   return (
     <nav
-      className="w-full navbar"
-      style={
-        hasBg
-          ? {
-              backgroundImage: "url('/navbar-bg.jpg')",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }
-          : {}
-      }
+      className="w-full"
+      style={{
+        backgroundImage:
+          "linear-gradient(90deg, #081a34 0%, #5394d1 50%, #081a34 100%)",
+      }}
     >
-      <img
-        src="/navbar-bg.jpg"
-        style={{ display: "none" }}
-        onError={() => setHasBg(false)}
-        alt=""
-      />
-
       <div className="mx-auto flex w-[75%] items-center justify-between py-6">
-        {/* Sol */}
         <div className="flex flex-1 items-center justify-start gap-10">
           {leftLinks.map((item, index) => (
             <NavItem
@@ -74,7 +62,6 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Logo */}
         <Link to="/" className="mx-12 flex shrink-0 items-center justify-center">
           <img
             src="/logo.png"
@@ -83,7 +70,6 @@ export default function Navbar() {
           />
         </Link>
 
-        {/* Sağ */}
         <div className="flex flex-1 items-center justify-end gap-10">
           {rightLinks.map((item, index) => (
             <NavItem

@@ -1,12 +1,10 @@
-// src/components/SocialSidebar.jsx
-
 import {
   IconBrandFacebook,
   IconBrandLinkedin,
   IconBrandInstagram,
 } from "@tabler/icons-react";
 
-const SocialSidebar = () => {
+const FloatingSocialLinks = () => {
   return (
     <div className="fixed right-4 top-1/2 z-50 flex -translate-y-1/2 flex-col gap-4">
       <a
@@ -39,4 +37,4 @@ const SocialSidebar = () => {
   );
 };
 
-export default SocialSidebar;
+export default FloatingSocialLinks;

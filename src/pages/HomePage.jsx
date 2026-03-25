@@ -9,18 +9,19 @@ import FooterSection from "../components/FooterSection";
 import ExperienceContactSection from "../components/ExperienceContactSection";
 import ContactSection from "../components/ContactSection";
 
-
-
 const HomePage = () => {
   return (
     <div className="min-h-screen w-full bg-[#d8dee6]">
-      <HeroVideo />
-      <TripleShowcase />
-      <GlassInfoSection />
-      <ExperienceContactSection />
-      <BlogSection />
-      <ContactSection />
 
+
+      <main className="w-full">
+        <HeroVideo />
+        <TripleShowcase />
+        <GlassInfoSection />
+        <ExperienceContactSection />
+        <BlogSection />
+        <ContactSection />
+      </main>
 
     </div>
   );

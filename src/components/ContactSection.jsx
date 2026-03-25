@@ -3,16 +3,19 @@ import ContactFormCard from "./ContactFormCard";
 
 const ContactSection = () => {
   return (
-    <div className="w-full py-20 bg-[#f7f9fc]">
-      <div className="w-[75%] mx-auto">
-        <div className="flex flex-col lg:flex-row lg:items-stretch">
-          <div className="w-full lg:w-[40%]">
+    <div className="w-full bg-[#f7f9fc] py-10 sm:py-12 lg:py-16">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div
+          className="
+            flex flex-col
+            gap-5 sm:gap-6 lg:flex-row lg:items-stretch lg:gap-8
+          "
+        >
+          <div className="w-full lg:w-5/12">
             <LocationMapCard />
           </div>
 
-          <div className="hidden lg:block lg:w-[13.3333%]" />
-
-          <div className="w-full lg:w-[46.6667%] mt-8 lg:mt-0">
+          <div className="w-full lg:w-7/12">
             <ContactFormCard />
           </div>
         </div>

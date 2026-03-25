@@ -26,21 +26,26 @@ const ContactFormCard = () => {
   };
 
   return (
-    <div className="w-full h-full bg-white rounded-2xl shadow-md border border-black/5 p-8">
-      <div className="mb-8">
-        <h2 className="text-2xl font-bold text-gray-900 mb-2">
+    <div
+      className="
+        w-full h-full rounded-2xl border border-black/5 bg-white shadow-md
+        p-4 sm:p-5 lg:p-6
+      "
+    >
+      <div className="mb-4 sm:mb-5">
+        <h2 className="mb-2 text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900">
           Bize Yazın
         </h2>
-        <p className="text-gray-600 leading-7 text-sm">
+        <p className="text-sm sm:text-base leading-6 text-gray-600">
           Sorularınızı, taleplerinizi ve mesajlarınızı bize iletebilirsiniz.
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-5">
+      <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
         <div>
           <label
             htmlFor="fullName"
-            className="block text-sm font-medium text-gray-700 mb-2"
+            className="mb-2 block text-sm sm:text-base font-medium text-gray-700"
           >
             Ad Soyad
           </label>
@@ -51,7 +56,13 @@ const ContactFormCard = () => {
             value={formData.fullName}
             onChange={handleChange}
             placeholder="Ad Soyad"
-            className="w-full rounded-xl border border-gray-300 px-4 py-3 outline-none focus:border-emerald-600"
+            className="
+              w-full rounded-xl border border-gray-300 bg-white
+              px-4 py-2.5 sm:py-3 lg:py-3
+              text-sm sm:text-base
+              outline-none transition
+              focus:border-emerald-600 focus:ring-2 focus:ring-emerald-100
+            "
             required
           />
         </div>
@@ -59,7 +70,7 @@ const ContactFormCard = () => {
         <div>
           <label
             htmlFor="email"
-            className="block text-sm font-medium text-gray-700 mb-2"
+            className="mb-2 block text-sm sm:text-base font-medium text-gray-700"
           >
             E-posta Adresi
           </label>
@@ -70,7 +81,13 @@ const ContactFormCard = () => {
             value={formData.email}
             onChange={handleChange}
             placeholder="ornek@mail.com"
-            className="w-full rounded-xl border border-gray-300 px-4 py-3 outline-none focus:border-emerald-600"
+            className="
+              w-full rounded-xl border border-gray-300 bg-white
+              px-4 py-2.5 sm:py-3 lg:py-3
+              text-sm sm:text-base
+              outline-none transition
+              focus:border-emerald-600 focus:ring-2 focus:ring-emerald-100
+            "
             required
           />
         </div>
@@ -78,7 +95,7 @@ const ContactFormCard = () => {
         <div>
           <label
             htmlFor="message"
-            className="block text-sm font-medium text-gray-700 mb-2"
+            className="mb-2 block text-sm sm:text-base font-medium text-gray-700"
           >
             Mesajınız
           </label>
@@ -89,14 +106,28 @@ const ContactFormCard = () => {
             onChange={handleChange}
             placeholder="Mesajınızı buraya yazın..."
             rows="3"
-            className="w-full rounded-xl border border-gray-300 px-4 py-3 outline-none resize-none focus:border-emerald-600"
+            className="
+              w-full rounded-xl border border-gray-300 bg-white
+              px-4 py-2.5 sm:py-3 lg:py-3
+              text-sm sm:text-base
+              outline-none resize-none transition
+              focus:border-emerald-600 focus:ring-2 focus:ring-emerald-100
+              min-h-[90px] sm:min-h-[110px] lg:min-h-[120px]
+            "
             required
           />
         </div>
 
         <button
           type="submit"
-          className="inline-block bg-emerald-600 text-white font-semibold px-8 py-3 rounded-xl shadow-md transition-all duration-300 hover:bg-emerald-700 hover:scale-105"
+          className="
+            w-full sm:w-auto
+            rounded-xl bg-emerald-600 px-6 sm:px-8 py-2.5 sm:py-3
+            text-sm sm:text-base font-semibold text-white shadow-md
+            transition-all duration-300
+            hover:bg-emerald-700 sm:hover:scale-105
+            focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2
+          "
         >
           Gönder
         </button>

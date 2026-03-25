@@ -4,14 +4,16 @@ import CompletedServicesSection from "../components/CompletedServicesSection";
 
 const ServicesPage = () => {
   return (
-    <div className="bg-white">
-      {/* İstatistikler */}
-      <StatsSection />
+    <div className="w-full bg-white">
+      <main className="w-full">
+        {/* İstatistikler */}
+        <StatsSection />
 
-      {/* Servis tanıtım */}
-      <TripleShowcase />
+        {/* Servis tanıtım */}
+        <TripleShowcase />
 
-      <CompletedServicesSection />
+        <CompletedServicesSection />
+      </main>
     </div>
   );
 };

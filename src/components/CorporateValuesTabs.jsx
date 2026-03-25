@@ -24,18 +24,29 @@ const CorporateValuesTabs = () => {
   const currentTab = tabs.find((tab) => tab.id === active);
 
   return (
-    <div className="my-10">
+    <div className="my-8 sm:my-10 lg:my-12">
       {/* Sekmeler */}
-      <div className="flex flex-wrap gap-6 mb-6 border-b border-gray-200 pb-2">
+      <div
+        className="
+          mb-5 sm:mb-6
+          flex flex-wrap gap-3 sm:gap-4 lg:gap-6
+          border-b border-gray-200 pb-2
+        "
+      >
         {tabs.map((tab) => (
           <button
             key={tab.id}
             onClick={() => setActive(tab.id)}
-            className={`font-semibold text-lg px-1 py-2 border-b-2 transition-all duration-300 ${
-              active === tab.id
-                ? "border-emerald-600 text-emerald-700"
-                : "border-transparent text-gray-500 hover:text-emerald-600"
-            }`}
+            className={`
+              border-b-2 px-1 py-2 font-semibold transition-all duration-300
+              text-sm sm:text-base lg:text-lg
+              whitespace-nowrap
+              ${
+                active === tab.id
+                  ? "border-emerald-600 text-emerald-700"
+                  : "border-transparent text-gray-500 hover:text-emerald-600"
+              }
+            `}
           >
             {tab.title}
           </button>
@@ -43,11 +54,16 @@ const CorporateValuesTabs = () => {
       </div>
 
       {/* İçerik */}
-      <div className="bg-[#f8fbfa] p-6 md:p-8 rounded-2xl border border-black/5">
-        <h3 className="text-2xl font-bold text-emerald-700 mb-4">
+      <div
+        className="
+          rounded-2xl border border-black/5 bg-[#f8fbfa]
+          p-4 sm:p-6 md:p-8 lg:p-10
+        "
+      >
+        <h3 className="mb-3 sm:mb-4 text-xl sm:text-2xl lg:text-3xl font-bold text-emerald-700">
           {currentTab?.title}
         </h3>
-        <p className="text-gray-700 leading-8 text-[17px]">
+        <p className="text-sm sm:text-base lg:text-[17px] leading-7 sm:leading-8 text-gray-700">
           {currentTab?.desc}
         </p>
       </div>

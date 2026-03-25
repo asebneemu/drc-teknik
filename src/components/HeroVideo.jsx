@@ -1,8 +1,8 @@
 export default function HeroVideo() {
   return (
-    <section className="w-full">
+    <section className="w-full overflow-hidden">
       <video
-        className="block w-full h-auto"
+        className="block w-full h-auto object-cover"
         autoPlay
         muted
         playsInline

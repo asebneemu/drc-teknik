@@ -13,14 +13,14 @@ const ProductCard = ({ item }) => {
         <img
           src={item.image}
           alt={item.title}
-          className={`w-full h-56 object-cover ${
+          className={`w-full h-44 sm:h-48 md:h-52 lg:h-56 object-cover ${
             isSold ? "grayscale" : ""
           }`}
         />
 
         {/* STATUS */}
         <span
-          className={`absolute top-4 left-4 text-xs px-3 py-1 rounded-full font-medium ${
+          className={`absolute top-3 left-3 sm:top-4 sm:left-4 text-[11px] sm:text-xs px-2.5 sm:px-3 py-1 rounded-full font-medium ${
             item.status === "sale"
               ? "bg-emerald-100 text-emerald-700"
               : "bg-gray-300 text-gray-700"
@@ -31,7 +31,7 @@ const ProductCard = ({ item }) => {
 
         {/* CONDITION */}
         <span
-          className={`absolute bottom-4 right-4 text-xs px-3 py-1 rounded-full font-medium ${
+          className={`absolute bottom-3 right-3 sm:bottom-4 sm:right-4 text-[11px] sm:text-xs px-2.5 sm:px-3 py-1 rounded-full font-medium ${
             item.condition === "new"
               ? "bg-blue-100 text-blue-700"
               : "bg-orange-100 text-orange-700"
@@ -41,10 +41,10 @@ const ProductCard = ({ item }) => {
         </span>
       </div>
 
-      <div className="p-5">
-        <p className="text-sm text-gray-500 mb-2">{item.date}</p>
+      <div className="p-4 sm:p-5">
+        <p className="text-xs sm:text-sm text-gray-500 mb-2">{item.date}</p>
 
-        <h3 className="text-xl font-semibold text-gray-800 mb-3">
+        <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-3">
           {item.title}
         </h3>
 
@@ -53,7 +53,7 @@ const ProductCard = ({ item }) => {
         </p>
 
         {!isSold && (
-          <p className="text-lg font-bold text-emerald-700">
+          <p className="text-base sm:text-lg font-bold text-emerald-700">
             {item.price}
           </p>
         )}

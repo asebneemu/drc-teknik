@@ -1,11 +1,11 @@
-// src/components/blog/BlogSection.jsx
 import BlogCard from "./BlogCard";
+import blogs from "../data/blogs";
 
 const BlogSection = () => {
+  const latestBlogs = blogs.slice(0, 3);
+
   return (
     <div className="w-[75%] mx-auto py-20">
-      
-      {/* Başlık */}
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold text-gray-800 mb-2">
           Blog
@@ -15,27 +15,17 @@ const BlogSection = () => {
         </p>
       </div>
 
-      {/* Kartlar */}
       <div className="grid md:grid-cols-3 gap-8">
-        <BlogCard
-          title="GNSS Teknolojilerinde Yeni Gelişmeler"
-          date="12 Mart 2026"
-          image="/blog1.jpg"
-        />
-
-        <BlogCard
-          title="Total Station Kullanım Rehberi"
-          date="8 Mart 2026"
-          image="/blog2.jpg"
-        />
-
-        <BlogCard
-          title="Harita Ölçümünde Dikkat Edilmesi Gerekenler"
-          date="3 Mart 2026"
-          image="/blog3.jpg"
-        />
+        {latestBlogs.map((blog) => (
+          <BlogCard
+            key={blog.id}
+            title={blog.title}
+            date={blog.date}
+            image={blog.image}
+            slug={blog.slug}
+          />
+        ))}
       </div>
-
     </div>
   );
 };

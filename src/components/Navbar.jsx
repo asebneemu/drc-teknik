@@ -15,7 +15,7 @@ const leftLinks = [
 ];
 
 const rightLinks = [
-  { label: "Hizmetler", href: "/hizmetler", icon: IconTool },
+  { label: "Servis Hizmetleri", href: "/hizmetler", icon: IconTool },
   { label: "Blog", href: "/blog", icon: IconArticle },
   { label: "İletişim", href: "/iletisim", icon: IconPhone },
 ];
@@ -26,9 +26,9 @@ function NavItem({ item, className = "" }) {
   return (
     <Link
       to={item.href}
-      className={`group flex items-center gap-2 py-3 text-[18px] font-semibold !text-[#f5f1e8] no-underline transition-all duration-300 hover:!text-blue-200 ${className}`}
+      className={`group flex items-center gap-2 py-3 text-[15px] font-semibold !text-[#f5f1e8] no-underline transition-all duration-300 hover:!text-blue-200 ${className}`}
     >
-      <span className="relative !text-[#f5f1e8] tracking-wide">
+      <span className="relative !text-[#f5f1e8] tracking-[0.03em]">
         {item.label}
         <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-blue-300 transition-all duration-300 group-hover:w-full"></span>
       </span>
@@ -52,6 +52,8 @@ export default function Navbar() {
       }}
     >
       <div className="mx-auto flex w-[75%] items-center justify-between py-6">
+        
+        {/* Sol */}
         <div className="flex flex-1 items-center justify-start gap-10">
           {leftLinks.map((item, index) => (
             <NavItem
@@ -62,6 +64,7 @@ export default function Navbar() {
           ))}
         </div>
 
+        {/* Logo */}
         <Link to="/" className="mx-12 flex shrink-0 items-center justify-center">
           <img
             src="/logo.png"
@@ -70,6 +73,7 @@ export default function Navbar() {
           />
         </Link>
 
+        {/* Sağ */}
         <div className="flex flex-1 items-center justify-end gap-10">
           {rightLinks.map((item, index) => (
             <NavItem
@@ -79,6 +83,7 @@ export default function Navbar() {
             />
           ))}
         </div>
+
       </div>
     </nav>
   );

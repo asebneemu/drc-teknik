@@ -1,21 +1,43 @@
 const ProductCard = ({ item }) => {
+  const isSold = item.status === "sold";
+
   return (
-    <div className="bg-white rounded-2xl shadow-md overflow-hidden border border-black/5 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+    <div
+      className={`rounded-2xl overflow-hidden border border-black/5 transition-all duration-300 ${
+        isSold
+          ? "bg-gray-50 opacity-70"
+          : "bg-white shadow-md hover:shadow-xl hover:-translate-y-1"
+      }`}
+    >
       <div className="relative">
         <img
           src={item.image}
           alt={item.title}
-          className="w-full h-56 object-cover"
+          className={`w-full h-56 object-cover ${
+            isSold ? "grayscale" : ""
+          }`}
         />
 
+        {/* STATUS */}
         <span
           className={`absolute top-4 left-4 text-xs px-3 py-1 rounded-full font-medium ${
             item.status === "sale"
               ? "bg-emerald-100 text-emerald-700"
-              : "bg-gray-200 text-gray-700"
+              : "bg-gray-300 text-gray-700"
           }`}
         >
-          {item.status === "sale" ? "Satılık" : "Satışı Tamamlandı"}
+          {item.status === "sale" ? "Satılık" : "Satıldı"}
+        </span>
+
+        {/* CONDITION */}
+        <span
+          className={`absolute bottom-4 right-4 text-xs px-3 py-1 rounded-full font-medium ${
+            item.condition === "new"
+              ? "bg-blue-100 text-blue-700"
+              : "bg-orange-100 text-orange-700"
+          }`}
+        >
+          {item.condition === "new" ? "Sıfır" : "2. El"}
         </span>
       </div>
 
@@ -30,8 +52,10 @@ const ProductCard = ({ item }) => {
           {item.description}
         </p>
 
-        {item.status === "sale" && (
-          <p className="text-lg font-bold text-emerald-700">{item.price}</p>
+        {!isSold && (
+          <p className="text-lg font-bold text-emerald-700">
+            {item.price}
+          </p>
         )}
       </div>
     </div>

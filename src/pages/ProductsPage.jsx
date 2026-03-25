@@ -3,12 +3,12 @@ import ProductCard from "../components/ProductCard";
 import products from "../data/products";
 
 const ProductsPage = () => {
-  const [filter, setFilter] = useState("all");
+  const [conditionFilter, setConditionFilter] = useState("all");
 
   const filteredProducts =
-    filter === "all"
+    conditionFilter === "all"
       ? products
-      : products.filter((item) => item.status === filter);
+      : products.filter((item) => item.condition === conditionFilter);
 
   return (
     <div className="w-full bg-[#f7f9fc] py-20">
@@ -19,50 +19,52 @@ const ProductsPage = () => {
           </span>
 
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-5">
-            Satılık ve Referans Ürünlerimiz
+            Satıştaki ve Tamamlanan Ürün Portföyümüz
           </h1>
 
           <p className="max-w-3xl mx-auto text-gray-600 text-lg leading-8">
-            Satışta olan ürünlerimizi ve satışı tamamlanmış referans cihazlarımızı
-            buradan inceleyebilirsiniz.
+            Satışta olan ürünlerimizi ve daha önce başarıyla teslim ettiğimiz cihazları inceleyebilir,
+            teknik servis süreçlerimiz ve ürün kalitemiz hakkında detaylı bilgi edinebilirsiniz.
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-8 mb-12">
+        {/* 🔥 SADE FİLTRE */}
+        <div className="flex justify-start gap-8 mb-12">
           <button
-            onClick={() => setFilter("all")}
-            className={`text-lg font-medium pb-2 border-b-2 transition-all duration-300 ${
-              filter === "all"
-                ? "border-emerald-600 text-emerald-700"
-                : "border-transparent text-gray-500 hover:text-emerald-600"
+            onClick={() => setConditionFilter("all")}
+            className={`text-lg font-medium pb-2 border-b-2 transition ${
+              conditionFilter === "all"
+                ? "border-blue-600 text-blue-700"
+                : "border-transparent text-gray-500 hover:text-blue-600"
             }`}
           >
             Tümü
           </button>
 
           <button
-            onClick={() => setFilter("sale")}
-            className={`text-lg font-medium pb-2 border-b-2 transition-all duration-300 ${
-              filter === "sale"
-                ? "border-emerald-600 text-emerald-700"
-                : "border-transparent text-gray-500 hover:text-emerald-600"
+            onClick={() => setConditionFilter("new")}
+            className={`text-lg font-medium pb-2 border-b-2 transition ${
+              conditionFilter === "new"
+                ? "border-blue-600 text-blue-700"
+                : "border-transparent text-gray-500 hover:text-blue-600"
             }`}
           >
-            Satılık Ürünler
+            Sıfır
           </button>
 
           <button
-            onClick={() => setFilter("sold")}
-            className={`text-lg font-medium pb-2 border-b-2 transition-all duration-300 ${
-              filter === "sold"
-                ? "border-emerald-600 text-emerald-700"
-                : "border-transparent text-gray-500 hover:text-emerald-600"
+            onClick={() => setConditionFilter("used")}
+            className={`text-lg font-medium pb-2 border-b-2 transition ${
+              conditionFilter === "used"
+                ? "border-blue-600 text-blue-700"
+                : "border-transparent text-gray-500 hover:text-blue-600"
             }`}
           >
-            Satışı Tamamlanan
+            2. El
           </button>
         </div>
 
+        {/* Ürünler */}
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
           {filteredProducts.map((item) => (
             <ProductCard key={item.id} item={item} />

@@ -4,13 +4,13 @@ import HomePage from "./pages/HomePage";
 import AboutUsPage from "./pages/AboutUsPage";
 import ProductsPage from "./pages/ProductsPage";
 import ServicesPage from "./pages/ServicesPage";
-import SocialSidebar from "./components/SocialSideBar";
+import SocialSidebar from "./components/SocialSidebar";
 
 export default function App() {
   return (
     <Router>
       <Header /> {/* BURAYA AL */}
-      <SocialSidebar />
+      <SocialSidebar /> {/* Sosyal medya ikonları için */}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/kurumsal" element={<AboutUsPage />} />

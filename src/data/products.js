@@ -9,6 +9,7 @@ const products = [
     condition: "used",
     category: "totalstation",
     date: "20 Mart 2026",
+    isCampaign: true,
   },
   {
     id: 2,
@@ -20,6 +21,7 @@ const products = [
     condition: "new",
     category: "gps",
     date: "18 Mart 2026",
+    isCampaign: false,
   },
   {
     id: 3,
@@ -31,6 +33,7 @@ const products = [
     condition: "used",
     category: "totalstation",
     date: "12 Mart 2026",
+    isCampaign: false,
   },
   {
     id: 4,
@@ -42,6 +45,7 @@ const products = [
     condition: "new",
     category: "nivo",
     date: "10 Mart 2026",
+    isCampaign: false,
   },
   {
     id: 5,
@@ -53,6 +57,7 @@ const products = [
     condition: "used",
     category: "nivo",
     date: "5 Mart 2026",
+    isCampaign: false,
   },
   {
     id: 6,
@@ -64,6 +69,7 @@ const products = [
     condition: "new",
     category: "teodolit",
     date: "1 Mart 2026",
+    isCampaign: false,
   },
 ];
 

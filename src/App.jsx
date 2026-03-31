@@ -9,12 +9,15 @@ import FooterSection from "./components/FooterSection";
 import BlogPage from "./pages/BlogPage";
 import BlogDetailPage from "./pages/BlogDetailPage";
 import ContactPage from "./pages/ContactPage";
+import ScrollToTop from "./components/ScrollToTop";
+import TarimPage from "./pages/TarimPage";
 
 export default function App() {
   return (
     <Router>
       <Header /> {/* BURAYA AL */}
       <FloatingSocialLinks /> {/* BURAYA AL */}
+      <ScrollToTop /> {/* BURAYA AL */}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/kurumsal" element={<AboutUsPage />} />
@@ -23,6 +26,7 @@ export default function App() {
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/:slug" element={<BlogDetailPage />} />
         <Route path="/iletisim" element={<ContactPage />} />
+        <Route path="/tarim" element={<TarimPage />} />
       </Routes>
       <FooterSection />
     </Router>

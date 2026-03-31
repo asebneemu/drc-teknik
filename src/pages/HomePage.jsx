@@ -9,6 +9,9 @@ import FooterSection from "../components/FooterSection";
 import ExperienceContactSection from "../components/ExperienceContactSection";
 import ContactSection from "../components/ContactSection";
 
+import TopconTarimGrubu from "../components/TopconTarimGrubu";
+import ServiceHighlights from "../components/ServiceHighlights";
+
 const HomePage = () => {
   return (
     <div className="min-h-screen w-full bg-[#d8dee6]">
@@ -16,7 +19,8 @@ const HomePage = () => {
 
       <main className="w-full">
         <HeroVideo />
-        <TripleShowcase />
+
+        <TopconTarimGrubu />
         <GlassInfoSection />
         <ExperienceContactSection />
         <BlogSection />

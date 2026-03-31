@@ -11,11 +11,18 @@ import {
 import { Link } from "react-router-dom";
 
 const FooterSection = () => {
+  const goTop = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant",
+    });
+  };
+
   return (
     <footer className="w-full bg-[#061225] text-white">
       <div className="mx-auto w-[90%] lg:w-full max-w-7xl py-12 sm:py-16 lg:py-20">
         <div className="grid grid-cols-1 gap-10 sm:gap-12 md:grid-cols-2 xl:grid-cols-4">
-          
           {/* 1. Sütun */}
           <div>
             <img
@@ -33,7 +40,7 @@ const FooterSection = () => {
 
             <div className="flex items-center gap-3 sm:gap-4">
               <a
-                href="https://facebook.com/"
+                href="https://www.facebook.com/profile.php?id=61557797723649"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
@@ -47,7 +54,7 @@ const FooterSection = () => {
               </a>
 
               <a
-                href="https://linkedin.com/"
+                href="https://www.linkedin.com/in/drc-teknik-65185aa2/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -61,7 +68,7 @@ const FooterSection = () => {
               </a>
 
               <a
-                href="https://instagram.com/"
+                href="https://www.instagram.com/drcteknikservice/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -85,40 +92,45 @@ const FooterSection = () => {
 
             <ul className="space-y-3 sm:space-y-4 text-sm sm:text-base text-white/80">
               <li>
-                <Link to="/" className="transition hover:text-white">
+                <Link to="/" onClick={goTop} className="transition hover:text-white">
                   Anasayfa
                 </Link>
               </li>
               <li>
-                <Link to="/kurumsal" className="transition hover:text-white">
+                <Link to="/kurumsal" onClick={goTop} className="transition hover:text-white">
                   Kurumsal
                 </Link>
               </li>
               <li>
-                <Link to="/urunler" className="transition hover:text-white">
+                <Link
+                  to="/urunler?condition=used"
+                  onClick={goTop}
+                  className="transition hover:text-white"
+                >
                   2. El Ürünlerimiz
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/kampanyali-cihazlar"
+                  to="/urunler?campaign=true"
+                  onClick={goTop}
                   className="transition hover:text-white"
                 >
                   Kampanyalı Cihazlar
                 </Link>
               </li>
               <li>
-                <Link to="/hizmetlerimiz" className="transition hover:text-white">
+                <Link to="/hizmetler" onClick={goTop} className="transition hover:text-white">
                   Hizmetlerimiz
                 </Link>
               </li>
               <li>
-                <Link to="/blog" className="transition hover:text-white">
+                <Link to="/blog" onClick={goTop} className="transition hover:text-white">
                   Blog
                 </Link>
               </li>
               <li>
-                <Link to="/iletisim" className="transition hover:text-white">
+                <Link to="/iletisim" onClick={goTop} className="transition hover:text-white">
                   İletişim
                 </Link>
               </li>
@@ -134,20 +146,21 @@ const FooterSection = () => {
 
             <ul className="space-y-3 sm:space-y-4 text-sm sm:text-base text-white/80">
               <li>
-                <Link to="/yetkili-servis" className="transition hover:text-white">
+                <Link to="/yetkili-servis" onClick={goTop} className="transition hover:text-white">
                   Yetkili Servis
                 </Link>
               </li>
               <li>
                 <Link
                   to="/bakim-onarim-kalibrasyon"
+                  onClick={goTop}
                   className="transition hover:text-white"
                 >
                   Bakım Onarım Kalibrasyon
                 </Link>
               </li>
               <li>
-                <Link to="/teknik-servis" className="transition hover:text-white">
+                <Link to="/teknik-servis" onClick={goTop} className="transition hover:text-white">
                   Teknik Servis
                 </Link>
               </li>
@@ -191,7 +204,6 @@ const FooterSection = () => {
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </footer>

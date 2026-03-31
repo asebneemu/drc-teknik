@@ -23,7 +23,7 @@ const GlassInfoSection = () => {
             overflow-hidden rounded-2xl bg-cover bg-center bg-no-repeat
           "
           style={{
-            backgroundImage: "url('/content4.jpg')",
+            backgroundImage: "url('/content6.jpg')",
           }}
         >
           <div className="h-full w-full bg-black/30 px-4 py-10 sm:px-6 sm:py-12 lg:px-10 lg:py-16">

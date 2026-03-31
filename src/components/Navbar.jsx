@@ -76,7 +76,7 @@ export default function Navbar() {
       className="w-full"
       style={{
         backgroundImage:
-          "linear-gradient(90deg, #081a34 0%, #5394d1 50%, #081a34 100%)",
+          "linear-gradient(90deg, #081a34 0%, #cedae6 50%, #081a34 100%)",
       }}
     >
       <div className="mx-auto flex w-[75%] items-center justify-between py-4 sm:py-5 lg:py-6">

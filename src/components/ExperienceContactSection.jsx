@@ -19,7 +19,7 @@ const ExperienceContactSection = () => {
               flex
             "
             style={{
-              backgroundImage: "url('/content5.jpg')",
+              backgroundImage: "url('/content5.jpeg')",
             }}
           >
             <div

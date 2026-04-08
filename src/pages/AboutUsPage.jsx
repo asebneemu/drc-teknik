@@ -22,28 +22,22 @@ const AboutUsPage = () => {
         <div className="bg-white rounded-3xl shadow-sm border border-black/5 p-5 sm:p-8 md:p-12">
           <div className="space-y-6 sm:space-y-8 text-gray-700 leading-7 sm:leading-8 text-sm sm:text-base lg:text-[17px]">
             <p>
-              DRC Teknik, harita teknolojileri alanında uzmanlaşmış yapısı ve sektörel tecrübesiyle,
-              CHCNAV ve EFIX markalarının yetkili servis sağlayıcısı olarak güven veren bir hizmet anlayışı
-              sunmaktadır. Yüksek teknolojiye sahip ekipman altyapısı, deneyimli teknik kadrosu ve çözüm odaklı
-              yaklaşımıyla, müşterilerine yalnızca teknik destek değil; aynı zamanda uzun vadeli güven, kalite ve
-              sürdürülebilir hizmet deneyimi sağlamaktadır.
+            DRC Teknik, harita ve hassas tarım teknolojileri alanında edindiği saha tecrübesini, güçlü teknik altyapı ve uzman kadrosu ile birleştirerek Topcon Agriculture ürün gamına yönelik yetkili teknik servis merkezi olarak hizmet vermektedir. Kurumsal yaklaşımı, yüksek hizmet standartları ve çözüm odaklı yapısıyla, müşterilerine yalnızca teknik destek sunmakla kalmaz; aynı zamanda güvenilir ve sürdürülebilir bir iş ortağı olarak konumlanır. Her bir servis süreci, kalite, hassasiyet ve süreklilik ilkeleri doğrultusunda titizlikle yürütülmektedir.
+
+
             </p>
 
             <p>
-              TOTALSTATION, GPS, TEODOLIT, LAZER NİVO, DİJİTAL NİVO ve OTOMATİK NİVO gibi farklı arazi ölçüm
-              cihazlarında bakım, onarım ve kalibrasyon hizmetleri sunan DRC Teknik, her cihazın ihtiyaç duyduğu
-              teknik hassasiyeti profesyonel süreçlerle ele almaktadır. Amaç yalnızca arızaları gidermek değil;
-              cihazların performansını artırmak, kullanım ömrünü uzatmak ve sahadaki verimliliği en üst düzeye
-              taşımaktır.
+              DRC Teknik, hassas tarım uygulamalarında kullanılan otomatik dümenleme sistemleri, GNSS tabanlı yönlendirme çözümleri ve saha verimliliğini artıran kontrol teknolojilerinin bakım, onarım ve kalibrasyon süreçlerinde uzmanlaşmıştır. Tarımsal üretimde doğruluk ve verimliliğin kritik öneme sahip olduğunun bilinciyle, sunulan tüm hizmetler yalnızca arıza giderme odaklı değil; sistem performansını artırmaya ve kullanım ömrünü uzatmaya yönelik kapsamlı bir anlayışla ele alınmaktadır.
             </p>
 
             <CorporateValuesTabs />
 
             <p>
-              Teknolojideki gelişmeleri yakından takip eden DRC Teknik, müşteri beklentilerine uygun yenilikçi
-              çözümleri sürekli olarak hizmet yapısına entegre etmektedir. Güvenilir servis yaklaşımı, uzmanlık,
-              güçlü teknik altyapı ve müşteri odaklı hizmet anlayışıyla DRC Teknik, harita teknolojileri alanında
-              tercih edilen ve saygın konumunu her geçen gün daha da güçlendirmektedir.
+             Santimetre hassasiyetinde doğruluk gerektiren tarım uygulamalarında; doğru ekim hatlarının oluşturulması, girdi maliyetlerinin azaltılması ve operasyonel verimliliğin artırılması doğrudan kullanılan teknolojilerin performansına bağlıdır. DRC Teknik, bu noktada devreye girerek sistemlerin sahadaki doğruluğunu ve sürekliliğini güvence altına alır. Uygulanan teknik süreçler, cihazların en yüksek verimle çalışmasını sağlayacak şekilde planlanır ve her aşama profesyonel kontrol mekanizmalarıyla desteklenir.
+            </p>
+              <p>
+       Teknolojik gelişmeleri yakından takip eden ve sürekli kendini yenileyen DRC Teknik, Topcon Agriculture teknolojilerinin sunduğu yenilikçi çözümleri hizmet yapısına entegre ederek müşterilerine güncel ve etkili çözümler sunmaktadır. Müşteri memnuniyetini merkeze alan yaklaşımı, güçlü teknik yetkinliği ve disiplinli servis anlayışıyla DRC Teknik, hassas tarım teknolojileri alanında güvenle tercih edilen ve sektördeki konumunu her geçen gün daha da güçlendiren bir marka olmayı sürdürmektedir.
             </p>
           </div>
         </div>

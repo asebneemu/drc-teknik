@@ -12,16 +12,20 @@ import ContactSection from "../components/ContactSection";
 import TopconTarimGrubu from "../components/TopconTarimGrubu";
 import ServiceHighlights from "../components/ServiceHighlights";
 
+import AuthorizedServiceCenter from "../components/AuthorizedServiceCenter";
+
 const HomePage = () => {
   return (
     <div className="min-h-screen w-full bg-[#d8dee6]">
 
 
       <main className="w-full">
+        
+        <AuthorizedServiceCenter />
         <HeroVideo />
-
-        <TopconTarimGrubu />
+        
         <GlassInfoSection />
+        <TopconTarimGrubu />
         <ExperienceContactSection />
         <BlogSection />
         <ContactSection />

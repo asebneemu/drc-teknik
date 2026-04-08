@@ -8,7 +8,7 @@ export default function HeroVideo() {
         playsInline
         preload="auto"
       >
-        <source src="/bg-17.mp4" type="video/mp4" />
+        <source src="/bg-3.mp4" type="video/mp4" />
         Tarayıcın video etiketini desteklemiyor.
       </video>
     </section>

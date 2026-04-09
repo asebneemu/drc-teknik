@@ -11,7 +11,7 @@ export default function HeroVideo() {
       setTimeout(() => {
         video.currentTime = 0;
         video.play();
-      }, 2000); // 2 saniye bekleme
+      }, 3000); // 3 saniye bekleme
     };
 
     video.addEventListener("ended", handleEnded);

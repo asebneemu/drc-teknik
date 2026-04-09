@@ -23,9 +23,9 @@ const HomePage = () => {
         
         <AuthorizedServiceCenter />
         <HeroVideo />
-        
-        <GlassInfoSection />
         <TopconTarimGrubu />
+        <GlassInfoSection />
+
         <ExperienceContactSection />
         <BlogSection />
         <ContactSection />

@@ -55,9 +55,18 @@ const TopconTarimGrubu = () => {
       <div className="relative mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         
         {/* TITLE */}
-        <h2 className="font-[Barlow] mb-6 text-center text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-[0.12em] uppercase text-[#111827]">
-          Topcon Tarım Grubu
+        <h2 className="font-[Barlow] mb-6 text-center text-2xl sm:text-3xl lg:text-4xl font-semibold font-bold tracking-[0.12em] uppercase text-[#111827]">
+          Topcon Hassas Tarım
         </h2>
+
+                {/* TEXT */}
+        <p className="mx-auto py-6 w-full text-justify text-sm leading-7 text-[#111827] sm:w-[85%] sm:text-base sm:leading-8 lg:w-[80%]">
+          Topcon Hassas Tarım ürünleri; sahada verimliliği artıran, hassas ölçüm
+          ve yönlendirme çözümleri sunan profesyonel sistemlerden oluşur. Modern
+          tarım uygulamalarına uygun bu ekipmanlar, operasyonel kolaylık ve
+          yüksek performansı bir arada sağlayarak kullanıcıya güvenilir, verimli
+          ve sürdürülebilir bir çalışma deneyimi sunar.
+        </p>
 
         {/* SLIDER */}
         <div className="relative mx-auto mb-8 flex h-[220px] items-center justify-center overflow-hidden sm:mb-10 sm:h-[300px] lg:h-[420px]">
@@ -93,14 +102,7 @@ const TopconTarimGrubu = () => {
           })}
         </div>
 
-        {/* TEXT */}
-        <p className="mx-auto w-full text-justify text-sm leading-7 text-[#111827] sm:w-[85%] sm:text-base sm:leading-8 lg:w-[80%]">
-          Topcon Tarım Grubu ürünleri; sahada verimliliği artıran, hassas ölçüm
-          ve yönlendirme çözümleri sunan profesyonel sistemlerden oluşur. Modern
-          tarım uygulamalarına uygun bu ekipmanlar, operasyonel kolaylık ve
-          yüksek performansı bir arada sağlayarak kullanıcıya güvenilir, verimli
-          ve sürdürülebilir bir çalışma deneyimi sunar.
-        </p>
+
 
         {/* LINK + OK */}
         <div className="mt-6 flex justify-center">

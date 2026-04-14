@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import HomePage from "./pages/HomePage";
 import AboutUsPage from "./pages/AboutUsPage";
 import ProductsPage from "./pages/ProductsPage";
+import ProductDetailPage from "./pages/ProductDetailPage";
 import ServicesPage from "./pages/ServicesPage";
 import FloatingSocialLinks from "./components/FloatingSocialLinks";
 import FooterSection from "./components/FooterSection";
@@ -22,11 +23,13 @@ export default function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/kurumsal" element={<AboutUsPage />} />
         <Route path="/urunler" element={<ProductsPage />} />
+        <Route path="/urunler/:slug" element={<ProductDetailPage />} />
         <Route path="/hizmetler" element={<ServicesPage />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/:slug" element={<BlogDetailPage />} />
         <Route path="/iletisim" element={<ContactPage />} />
         <Route path="/tarim" element={<TarimPage />} />
+
       </Routes>
       <FooterSection />
     </Router>

@@ -54,7 +54,7 @@ const solutionCards = [
     description:
       "Makine, ekipman ve saha süreçlerini merkezi olarak yönetmenizi sağlayan kontrol sistemleri ile operasyonel takip ve verimlilik artırılır.",
     icon: IconCpu,
-    image: "/agriculture/kontrol-sistemleri.jpeg",
+    image: "/agriculture/kontrol-sistemleri.jpg",
   },
 ];
 
@@ -85,7 +85,7 @@ const serviceCards = [
   },
   {
     id: 4,
-    title: "Satış Sonrası Destek",
+    title: "servis Sonrası Destek",
     description:
       "İhtiyaç duyulan durumlarda kullanıcıya hızlı geri dönüş, yönlendirme ve operasyon devamlılığını destekleyen çözüm yaklaşımı sunulur.",
     icon: IconHeadset,
@@ -119,14 +119,14 @@ const cycleCards = [
     icon: IconLeaf,
     image: "/agriculture/ekim-dikim.jpeg",
   },
-  {
-    id: 3,
-    title: "Ürün Bakımı",
-    description:
-      "İlaçlama, dağıtım ve crop care uygulamalarında kontrollü saha yönetimi ile girdi kullanımı optimize edilir.",
-    icon: IconSpray,
-    image: "/agriculture/urun-bakim.jpeg",
-  },
+{
+  id: 3,
+  title: "İlaçlama ve Girdi Yönetimi",
+  description:
+    "İlaçlama ve gübre uygulamalarında hassas tarım teknolojileri sayesinde doğru miktarda ve doğru alanda uygulama yapılarak kaynak kullanımı optimize edilir.",
+  icon: IconSpray,
+  image: "/agriculture/urun-bakim.jpeg",
+},
 {
   id: 4,
   title: "Hasat ve Verim Takibi",
@@ -299,7 +299,7 @@ const TarimPage = () => {
               Topcon Agriculture sistemleri; hassas tarım uygulamaları, makine
               otomasyonu ve veri odaklı saha yönetimi ile tarımsal
               operasyonların daha verimli, kontrollü ve sürdürülebilir şekilde
-              yürütülmesini sağlar. DRC Teknik olarak bu çözümlerin satış,
+              yürütülmesini sağlar. DRC Teknik olarak bu çözümlerin servis,
               entegrasyon ve teknik destek süreçlerinde profesyonel hizmet
               sunuyoruz.
             </p>
@@ -499,6 +499,39 @@ const TarimPage = () => {
         </div>
       </section>
 
+      {/* CROP MONITORING */}
+<section className="w-full bg-white py-10 sm:py-12 lg:py-14">
+  <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+    <Reveal direction="left">
+      <div className="max-w-4xl">
+        <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-[0.18em] text-blue-700">
+          Crop Monitoring
+        </span>
+
+        <h2 className="mb-4 text-3xl font-semibold text-[#111827] sm:text-4xl">
+          Crop Monitoring Nedir?
+        </h2>
+
+        <p className="text-base leading-8 text-justify text-gray-600 sm:text-lg">
+          Crop monitoring, tarla içerisindeki ürün gelişiminin, bitki sağlığının
+          ve saha koşullarının düzenli olarak izlenmesini sağlayan hassas tarım
+          yaklaşımıdır. Bu sistem sayesinde üretim alanındaki değişimler daha
+          erken fark edilir, verim üzerinde etkili olabilecek riskler daha hızlı
+          değerlendirilir ve saha yönetimi daha kontrollü hale gelir.
+        </p>
+
+        <p className="mt-4 text-base leading-8 text-justify text-gray-600 sm:text-lg">
+          Sensör verileri, uydu destekli izleme çözümleri ve saha analizleri ile
+          desteklenen crop monitoring uygulamaları; sulama, gübreleme ve ilaçlama
+          gibi işlemlerin daha doğru planlanmasına yardımcı olur. Böylece hem
+          kaynak kullanımı optimize edilir hem de tarımsal operasyonlarda daha
+          bilinçli karar alma imkanı sağlanır.
+        </p>
+      </div>
+    </Reveal>
+  </div>
+</section>
+
       {/* YENİ EK - GEÇİŞLİ BÜYÜK GÖRSEL + YAZI */}
       <section className="w-full bg-[#eaf1f7] py-14 sm:py-16 lg:py-20">
         <div className="mx-auto grid w-full max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:items-center">
@@ -557,66 +590,74 @@ const TarimPage = () => {
         </div>
       </section>
 
-      {/* YENİ SECTION 2 - BAĞLANTILI VERİ AKIŞI */}
+         {/* YENİ SECTION 2 - BAĞLANTILI VERİ AKIŞI */}
       <section className="w-full bg-[#0f172a] py-14 sm:py-16 lg:py-20">
-        <div className="mx-auto grid w-full max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1fr_1fr] lg:px-8 lg:items-center">
-          <Reveal direction="left">
-            <div className="overflow-hidden rounded-[30px] border border-white/10 bg-white/5 shadow-xl">
-              <div className="h-[420px] w-full bg-slate-700">
-                <ScaleImage
-                  src="/agriculture/veri-akisi.jpeg"
-                  alt="Topcon Agriculture veri akışı ve dijital tarım yönetimi"
-                  className="h-full w-full"
-                />
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+            
+<Reveal direction="left">
+  <div className="overflow-hidden rounded-[30px] border border-white/10 bg-white/5 shadow-xl">
+    <div className="h-[380px] sm:h-[460px] lg:h-[520px] w-full bg-slate-700">
+      <ScaleImage
+        src="/agriculture/veri-akisi.jpeg"
+        alt="Topcon Agriculture veri akışı ve dijital tarım yönetimi"
+        className="h-full w-full"
+        overlayClass="bg-[linear-gradient(135deg,rgba(15,23,42,0.15),rgba(15,23,42,0.35))]"
+      />
+    </div>
+  </div>
+</Reveal>
+
+            <Reveal direction="right" delay={120}>
+              <div className="max-w-2xl lg:pl-4">
+                <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-[0.18em] text-blue-300">
+                  Dijital Tarım Süreci
+                </span>
+
+                <h2 className="mb-5 text-3xl font-semibold leading-tight text-white sm:text-4xl">
+                  Sahadan ekrana, ekrandan analize uzanan bağlantılı yapı
+                </h2>
+
+                <p className="mb-8 text-base leading-8 text-white/75 sm:text-lg">
+                  Tarımsal operasyon verilerinin yalnızca sahada kalmaması; doğru
+                  şekilde toplanması, aktarılması ve değerlendirilmesi modern tarım
+                  yönetiminin en önemli parçalarından biridir. Topcon yaklaşımı,
+                  kabin içi kontrol sistemleri ile dijital karar altyapısını aynı
+                  zincir içinde birleştirir.
+                </p>
+
+                <div className="space-y-3">
+                  {dataFlow.map((item, index) => {
+                    const Icon = item.icon;
+
+                    return (
+                      <Reveal
+                        key={item.id}
+                        direction="right"
+                        delay={index * 100}
+                      >
+                        <div className="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/5 px-5 py-4 backdrop-blur-sm">
+                          <div className="mt-1 inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-white/10 text-blue-200">
+                            <Icon size={22} />
+                          </div>
+
+                          <div>
+                            <h3 className="mb-1 text-lg font-semibold text-white">
+                              {item.title}
+                            </h3>
+
+                            <p className="text-sm leading-7 text-white/70 sm:text-base">
+                              {item.description}
+                            </p>
+                          </div>
+                        </div>
+                      </Reveal>
+                    );
+                  })}
+                </div>
               </div>
-            </div>
-          </Reveal>
-
-          <Reveal direction="right" delay={120}>
-            <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-[0.18em] text-blue-300">
-              Dijital Tarım Süreci
-            </span>
-
-            <h2 className="mb-5 text-3xl font-semibold text-white sm:text-4xl">
-              Sahadan ekrana, ekrandan analize uzanan bağlantılı yapı
-            </h2>
-
-            <p className="mb-8 text-base leading-8 text-white/75">
-              Tarımsal operasyon verilerinin yalnızca sahada kalmaması; doğru
-              şekilde toplanması, aktarılması ve değerlendirilmesi modern tarım
-              yönetiminin en önemli parçalarından biridir. Topcon yaklaşımı,
-              kabin içi kontrol sistemleri ile dijital karar altyapısını aynı
-              zincir içinde birleştirir.
-            </p>
-
-            <div className="space-y-4">
-              {dataFlow.map((item, index) => {
-                const Icon = item.icon;
-
-                return (
-                  <Reveal
-                    key={item.id}
-                    direction="right"
-                    delay={index * 100}
-                  >
-                    <div className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-sm">
-                      <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 text-blue-200">
-                        <Icon size={24} />
-                      </div>
-
-                      <h3 className="mb-2 text-lg font-semibold text-white">
-                        {item.title}
-                      </h3>
-
-                      <p className="text-sm leading-7 text-white/70 sm:text-base">
-                        {item.description}
-                      </p>
-                    </div>
-                  </Reveal>
-                );
-              })}
-            </div>
-          </Reveal>
+            </Reveal>
+          </div>
         </div>
       </section>
 
@@ -775,7 +816,7 @@ const TarimPage = () => {
             </span>
 
             <h2 className="mb-4 text-3xl font-semibold text-[#111827] sm:text-4xl">
-              Satış sonrası süreçlerde profesyonel yaklaşım
+              Servis sonrası süreçlerde profesyonel yaklaşım
             </h2>
 
             <p className="mx-auto max-w-3xl text-base leading-8 text-gray-600">

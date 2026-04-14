@@ -2,6 +2,7 @@ import {
   FaFacebookF,
   FaLinkedinIn,
   FaInstagram,
+  FaWhatsapp,
 } from "react-icons/fa";
 import {
   FiMapPin,
@@ -32,55 +33,70 @@ const FooterSection = () => {
             />
 
             <p className="mb-6 sm:mb-8 text-sm sm:text-base leading-7 sm:leading-8 text-white/80">
-              DRC Teknik, CHCNAV & EFIX yetkili servisi olarak harita
-              teknolojilerinde uzman bakım, onarım ve kalibrasyon
-              hizmetleri sunar. TOTALSTATION, GPS ve diğer cihazlarınız
-              için güvenilir çözüm ortağınız.
+DRC Teknik, Topcon Agriculture ürünleri için yetkili servis merkezi olarak, tarım teknolojileri alanında bakım, onarım ve kalibrasyon hizmetleri sunar. Sahada kullanılan sistemlerin performansını korumaya yönelik teknik destek ve servis süreçleriyle güvenilir bir çözüm ortağıdır.
             </p>
 
             <div className="flex items-center gap-3 sm:gap-4">
-              <a
-                href="https://www.facebook.com/profile.php?id=61557797723649"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-                className="
-                  flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center
-                  rounded-full border border-white/20 text-base sm:text-xl text-white/80
-                  transition hover:border-white hover:text-white
-                "
-              >
-                <FaFacebookF />
-              </a>
+  {/* WHATSAPP */}
+  <a
+    href="https://wa.me/905XXXXXXXXX"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="WhatsApp"
+    className="
+      flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center
+      rounded-full border border-white/20 text-base sm:text-xl text-white/80
+      transition hover:border-white hover:text-white
+    "
+  >
+    <FaWhatsapp />
+  </a>
 
-              <a
-                href="https://www.linkedin.com/in/drc-teknik-65185aa2/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                className="
-                  flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center
-                  rounded-full border border-white/20 text-base sm:text-xl text-white/80
-                  transition hover:border-white hover:text-white
-                "
-              >
-                <FaLinkedinIn />
-              </a>
+  {/* LINKEDIN */}
+  <a
+    href="https://www.linkedin.com/in/drc-teknik-65185aa2/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="LinkedIn"
+    className="
+      flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center
+      rounded-full border border-white/20 text-base sm:text-xl text-white/80
+      transition hover:border-white hover:text-white
+    "
+  >
+    <FaLinkedinIn />
+  </a>
 
-              <a
-                href="https://www.instagram.com/drcteknikservice/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                className="
-                  flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center
-                  rounded-full border border-white/20 text-base sm:text-xl text-white/80
-                  transition hover:border-white hover:text-white
-                "
-              >
-                <FaInstagram />
-              </a>
-            </div>
+  {/* INSTAGRAM */}
+  <a
+    href="https://www.instagram.com/drcteknikservice/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Instagram"
+    className="
+      flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center
+      rounded-full border border-white/20 text-base sm:text-xl text-white/80
+      transition hover:border-white hover:text-white
+    "
+  >
+    <FaInstagram />
+  </a>
+
+  {/* FACEBOOK */}
+  <a
+    href="https://www.facebook.com/profile.php?id=61557797723649"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Facebook"
+    className="
+      flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center
+      rounded-full border border-white/20 text-base sm:text-xl text-white/80
+      transition hover:border-white hover:text-white
+    "
+  >
+    <FaFacebookF />
+  </a>
+</div>
           </div>
 
           {/* 2. Sütun */}
@@ -99,24 +115,6 @@ const FooterSection = () => {
               <li>
                 <Link to="/kurumsal" onClick={goTop} className="transition hover:text-white">
                   Kurumsal
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/urunler?condition=used"
-                  onClick={goTop}
-                  className="transition hover:text-white"
-                >
-                  2. El Ürünlerimiz
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/urunler?campaign=true"
-                  onClick={goTop}
-                  className="transition hover:text-white"
-                >
-                  Kampanyalı Cihazlar
                 </Link>
               </li>
               <li>

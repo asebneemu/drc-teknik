@@ -6,7 +6,7 @@ const agriculture = [
     subtitle: "Otomatik dümenleme ve hassas yön takibi çözümleri",
     description:
       "Yönlendirme kategorisi, tarla içinde daha doğru geçişler yapılmasını, hataların azaltılmasını ve operatörün saha uygulamalarını daha kontrollü yürütmesini destekleyen ürün grubudur. Bu yapı, hassas tarımın temel katmanlarından biri olarak değerlendirilir.",
-    image: "",
+    image: "/agriculture/hassas-tarim-1.jpeg",
     content: [
       "Yönlendirme çözümleri, hassas tarım uygulamalarında saha içi doğruluğu artıran en temel yapılardan biridir. Tarla içinde her geçişin daha düzenli ve daha tekrarlanabilir şekilde yapılması, hem uygulama kalitesini hem de operasyon takibini doğrudan etkiler. Bu nedenle yönlendirme sistemleri yalnızca sürüş kolaylığı sunan yardımcı ekipmanlar olarak değil, bütün operasyon mantığını etkileyen bir teknoloji ailesi olarak değerlendirilmelidir.",
       "Bu kategori altında yer alan ekranlar, direksiyon sistemleri, alıcılar ve kontrol birimleri; farklı makine yapılarına uyarlanabilen modüler bir sistem mantığıyla çalışır. Böylece her ürün yalnızca tek başına değil, aynı zamanda diğer bileşenlerle birlikte oluşturduğu çalışma düzeni içinde anlam kazanır. Özellikle farklı tarla koşullarında hat takibinin bozulmadan sürdürülmesi, operatör yükünün azaltılması ve geçişlerin daha dengeli yapılması bu ürün grubunun öne çıkan yönleri arasında yer alır.",
@@ -76,7 +76,7 @@ const agriculture = [
     subtitle: "Konum doğruluğunu artıran GNSS destek çözümleri",
     description:
       "Düzeltme servisleri kategorisi, yönlendirme ve otomatik dümenleme sistemlerinde daha yüksek doğruluk ve daha tutarlı tekrar edilebilirlik sağlamak amacıyla kullanılan ürünleri kapsar.",
-    image: "",
+    image: "/agriculture/gps-tarim.jpeg",
     content: [
       "Düzeltme servisleri, hassas tarım teknolojilerinin doğruluk katmanını güçlendiren yapılardan biridir. GNSS tabanlı yönlendirme sistemleri, temel olarak konum bilgisiyle çalışır; ancak bu bilginin daha hassas ve daha güvenilir hale gelmesi için düzeltme katmanına ihtiyaç duyulur. Bu nedenle bu kategori, yalnızca ek bir hizmet değil; yönlendirme kalitesini doğrudan etkileyen tamamlayıcı bir yapı olarak görülmelidir.",
       "Bu ürün grubu, farklı saha koşullarında ve farklı operasyon yoğunluklarında daha kararlı konum bilgisi sağlanmasına yardımcı olur. Toprak hazırlığı, ekim, ürün bakımı ve hasat gibi işlemlerde aynı hatların daha güvenilir şekilde korunması, uygulamaların daha tutarlı yürütülmesine katkı sağlar. Özellikle yüksek doğruluk gerektiren operasyonlarda bu kategorinin etkisi daha net hissedilir.",
@@ -131,7 +131,7 @@ const agriculture = [
     subtitle: "Operasyon kontrolü ve saha yönetimine yönelik dijital arayüzler",
     description:
       "Bu kategori; saha uygulamalarının izlenmesi, yönlendirme yönetimi, uygulama kontrolü, haritalama ve farklı ekipmanlarla uyumlu çalışma gibi işlevleri destekleyen ekran ve yazılım ürünlerini kapsar.",
-    image: "",
+    image: "/agriculture/verim-analizi.jpeg",
     content: [
       "Ekran ve yazılım çözümleri, hassas tarım teknolojilerinin kullanıcıyla buluştuğu temel arayüz katmanıdır. Sahadaki yönlendirme, uygulama kontrolü, veri takibi ve operasyon yönetimi gibi işlemler; çoğu zaman doğrudan bu ekranlar ve yazılımlar üzerinden yürütülür. Bu nedenle bu kategori, yalnızca bir görüntüleme alanı değil, sistemin yönetim noktası olarak düşünülmelidir.",
       "Bu ürün grubu içinde yer alan konsollar ve yazılım altyapıları, farklı işlevleri tek çatı altında toplayabilen bir çalışma mantığına sahiptir. Operatör, sahadaki geçiş desenlerini ayarlama, uygulama oranlarını izleme, yapılan işlemleri takip etme ve gerekli durumlarda veriyi görselleştirme gibi pek çok adımı aynı ortam içinde yönetebilir. Bu da operasyon sırasında karar almayı kolaylaştırır.",
@@ -196,7 +196,7 @@ const agriculture = [
     subtitle: "Veri akışı, bağlantı ve dijital karar süreçlerine yönelik çözümler",
     description:
       "Dijital tarım yönetimi kategorisi, sahadan gelen verilerin toplanması, düzenlenmesi, görselleştirilmesi ve farklı karar süreçlerinde kullanılmasına yönelik ürün grubudur.",
-    image: "",
+    image: "/agriculture/urun-bakim.jpeg",
     content: [
       "Dijital tarım yönetimi, hassas tarımın yalnızca saha içi uygulamalarla sınırlı kalmamasını sağlayan önemli başlıklardan biridir. Saha verisinin toplanması, saklanması, düzenlenmesi ve anlamlı hale getirilmesi; yalnızca o anki operasyon için değil, sonraki planlama süreçleri için de önemli bir değer üretir. Bu nedenle bu kategori, fiziksel ekipman ile dijital karar mantığı arasında köprü kuran bir yapı olarak değerlendirilebilir.",
       "Bu grupta yer alan ürünler, farklı veri akışlarını ortak bir düzende bir araya getirme amacı taşır. Operasyon sırasında elde edilen bilgilerin bulut bağlantısı, uygulama desteği ya da dijital platformlar üzerinden düzenlenmesi; kullanıcıya daha geniş bir takip perspektifi sunar. Böylece yalnızca o an ne olduğu değil, geçmişte ne yapıldığı ve sonraki aşamada neyin planlanabileceği de daha görünür hale gelir.",
@@ -256,7 +256,7 @@ const agriculture = [
     subtitle: "Arazi düzenleme ve saha hazırlık çözümleri",
     description:
       "Toprak hazırlığı kategorisi; arazi yüzeyinin düzenlenmesi, drenaj, saha tasarımı ve sezon öncesi hazırlık işlemlerine yönelik ürün ve yazılım çözümlerini kapsar.",
-    image: "",
+    image: "/agriculture/tarım-genel.jpeg",
     content: [
       "Toprak hazırlığı, tarımsal sezonun başlangıcında yapılan en kritik aşamalardan biridir. Saha yüzeyinin doğru düzenlenmesi, su yönetiminin daha kontrollü hale getirilmesi ve arazi yapısının operasyona uygun hale getirilmesi; sonraki aşamalarda verim üzerinde doğrudan etkili olabilir. Bu nedenle bu kategori, yalnızca hazırlık dönemiyle sınırlı olmayan, bütün sezonu etkileyebilecek bir başlık olarak düşünülmelidir.",
       "Bu kategoride yer alan ürünler; arazi ölçümü, saha tasarımı, yüzey düzenleme ve kontrol süreçlerine odaklanır. Toprağın yalnızca işlenmesi değil, aynı zamanda daha planlı biçimde hazırlanması ve kaynakların daha dengeli yönetilmesi bu ürün grubunun temel amaçları arasında yer alır. Özellikle drenaj ve yüzey formunun kontrol altında tutulduğu alanlarda bu çözümler daha da anlamlı hale gelir.",
@@ -321,7 +321,7 @@ const agriculture = [
     subtitle: "Tohum yerleşimi ve ekim düzenine yönelik çözümler",
     description:
       "Ekim ve dikim kategorisi, tohum yerleşimi, sıra doğruluğu ve düzenli ekim akışının sağlanmasına yardımcı olan ürün grubudur.",
-    image: "",
+    image: "/agriculture/hassas-tarim-2.jpeg",
     content: [
       "Ekim ve dikim aşaması, tarımsal üretimde doğrudan sonuçlara etki eden temel işlemlerden biridir. Tohumun doğru şekilde yerleştirilmesi, sıra düzeninin korunması ve uygulamanın tutarlı biçimde yürütülmesi; sonraki büyüme performansını etkileyebilir. Bu nedenle bu kategori, yalnızca mekanik ekim sürecini değil, bu sürecin hassasiyetle yönetilmesini sağlayan teknik altyapıyı da kapsar.",
       "Bu grupta yer alan ürünler; ekim makinelerinin daha düzenli çalışması, sıra aralıklarının daha tutarlı yürütülmesi ve ekim sürecinin daha kontrollü izlenmesi için kullanılan çözümleri içerir. Özellikle değişken oranlı uygulama mantığı, saha içinde farklı koşullara göre daha esnek çalışma imkanı sunabilir. Böylece ekim yalnızca tekdüze bir uygulama olmaktan çıkar ve daha kontrollü bir süreç haline gelir.",
@@ -381,7 +381,7 @@ const agriculture = [
     subtitle: "İlaçlama, gübreleme ve hassas uygulama çözümleri",
     description:
       "Ürün bakımı kategorisi; bitki sağlığının izlenmesi, uygulama kontrolü, ilaçlama, gübreleme ve saha içi hassas müdahale süreçlerine yönelik ürün grubudur.",
-    image: "",
+    image: "/agriculture/precision-wide.jpeg",
     content: [
       "Ürün bakımı, tarımsal operasyonların en hassas ve en maliyetli aşamalarından biri olabilir. Doğru ürünün, doğru zamanda, doğru miktarda ve doğru alanda uygulanması; hem maliyet hem verim hem de kaynak kullanımı açısından önemli sonuçlar doğurur. Bu nedenle bu kategori, saha içinde karar ve uygulama kalitesinin yüksek olması gereken başlıklardan biri olarak öne çıkar.",
       "Bu grupta yer alan sensörler, kontrol üniteleri, ilaçlama çözümleri ve ilgili bileşenler; uygulama sürecinin daha dengeli yürütülmesine yardımcı olur. Özellikle crop monitoring mantığıyla birlikte değerlendirildiğinde, saha durumunu izleme ve buna göre hareket etme kapasitesi daha anlamlı hale gelir. Böylece uygulamalar daha rastgele değil, daha bilinçli bir çerçeve içinde ele alınabilir.",
@@ -466,7 +466,7 @@ const agriculture = [
     subtitle: "Verim ve nem takibine yönelik hasat çözümleri",
     description:
       "Hasat kategorisi; verim ölçümü, nem takibi ve hasat verilerinin kayıt altına alınmasına yönelik ürün grubudur.",
-    image: "",
+    image: "/agriculture/hasat-verim.jpeg",
     content: [
       "Hasat aşaması, bütün sezon boyunca yürütülen çalışmaların sonuçlarının en görünür hale geldiği dönemlerden biridir. Bu aşamada yalnızca ürünün toplanması değil, aynı zamanda performansın ölçülmesi ve verinin kayıt altına alınması da önem taşır. Bu nedenle hasat kategorisi, sonuçların gözlemlendiği ve gelecekteki kararlar için veri üretildiği bir başlık olarak öne çıkar.",
       "Bu grupta yer alan verim ve nem sensörleri ile kontrol üniteleri, hasat sırasında daha net bir görünürlük sağlanmasına yardımcı olur. Gerçek zamanlı ya da kayıt temelli veri yaklaşımı sayesinde yalnızca toplam sonuç değil, saha içindeki farklı alanların performansı da daha anlaşılır hale gelebilir. Böylece hasat süreci, yalnızca toplama işlemi olmaktan çıkar ve aynı zamanda ölçüm yapılan bir döneme dönüşür.",
@@ -526,7 +526,7 @@ const agriculture = [
     subtitle: "Ağırlık, yük ve ölçüm takibine yönelik çözümler",
     description:
       "Tartım kategorisi; farklı tarımsal operasyonlarda ağırlık, yük, malzeme akışı ve ölçüm verilerinin daha düzenli takip edilmesine yönelik ürün grubudur.",
-    image: "",
+    image: "/agriculture/tartma.jpeg",
     content: [
       "Tartım çözümleri, tarımsal operasyonlarda çoğu zaman arka planda kalmasına rağmen karar süreçleri açısından önemli bir yere sahiptir. Ağırlık, yük ve malzeme miktarının doğru şekilde bilinmesi; planlama, kayıt ve operasyon takibi açısından daha güvenilir bir temel oluşturur. Bu nedenle bu kategori, yalnızca ölçüm yapan cihazlar topluluğu olarak değil, veri doğruluğunu güçlendiren bir yapı olarak ele alınmalıdır.",
       "Bu grupta yer alan göstergeler, sensörler, dönüştürücüler ve uygulama bileşenleri; farklı ölçüm senaryolarında kullanılabilecek bir mantık sunar. Grain cart uygulamalarından genel tartım yapısına, onboard weighing mantığından veri aktarımına kadar genişleyen bu alan; saha içinde ölçümün daha işlevsel hale gelmesini sağlar. Özellikle yük ve ağırlık bilgisinin düzenli tutulması gereken yapılarda bu kategori öne çıkar.",
@@ -606,7 +606,7 @@ const agriculture = [
     subtitle: "Yem karışımı, takip ve kayıt çözümleri",
     description:
       "Yem yönetimi kategorisi; yem karışım sürecinin izlenmesi, kayıt altına alınması ve dijital yapı ile desteklenmesine yönelik ürün grubudur.",
-    image: "",
+    image: "/agriculture/yem.jpeg",
     content: [
       "Yem yönetimi, özellikle süreklilik ve kayıt gerektiren operasyonlarda önemli bir çalışma alanı oluşturur. Yalnızca karışımın hazırlanması değil, bu sürecin takip edilmesi, kayıt altına alınması ve gerektiğinde yazılım desteğiyle yönetilmesi de bu kategorinin kapsamına girer. Bu nedenle yem yönetimi ürünleri, operasyonel düzen ve veri takibi açısından birlikte değerlendirilmelidir.",
       "Bu grupta yer alan göstergeler, bağlantı modülleri, takip çözümleri ve yazılım yapıları; yem karışım sürecini daha görünür ve daha düzenli hale getirmeyi amaçlar. Mobil uygulama desteği ve veri aktarımı gibi başlıklarla birlikte düşünüldüğünde, bu kategori yalnızca mekanik bir izleme alanı olmaktan çıkar ve dijital takip yapısına dönüşür.",

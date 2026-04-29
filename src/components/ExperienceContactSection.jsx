@@ -1,5 +1,5 @@
 const ExperienceContactSection = () => {
-  const phoneNumber = "905XXXXXXXXX";
+  const phoneNumber = "905309222322";
   const message = "Merhaba, hizmetleriniz hakkında bilgi almak istiyorum.";
 
   const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
@@ -19,12 +19,12 @@ const ExperienceContactSection = () => {
               flex
             "
             style={{
-              backgroundImage: "url('/content5.jpeg')",
+              backgroundImage: "url('/sol-arkaplan.jpeg')",
             }}
           >
             <div
               className="
-                flex w-full items-center justify-center bg-black/60
+                flex w-full items-center justify-center bg-black/30
                 px-5 py-10 sm:px-8 sm:py-12 lg:px-10 lg:py-14
               "
             >

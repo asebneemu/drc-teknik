@@ -16,6 +16,8 @@ import AuthorizedServiceCenter from "../components/AuthorizedServiceCenter";
 
 import FullWidthBackgroundSection from "../components/FullWidthBackgroundSection";
 
+import VideoShowcase from "../components/VideoShowcase";
+
 const HomePage = () => {
   return (
     <div className="min-h-screen w-full bg-[#d8dee6]">
@@ -25,8 +27,9 @@ const HomePage = () => {
         
         <AuthorizedServiceCenter />
         <HeroVideo />
-        <FullWidthBackgroundSection />
+
         <TopconTarimGrubu />
+        <VideoShowcase />
         <GlassInfoSection />
 
         <ExperienceContactSection />

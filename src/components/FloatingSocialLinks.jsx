@@ -22,7 +22,7 @@ const FloatingSocialLinks = () => {
       {/* MOBILE */}
       <div className="flex gap-3 sm:hidden">
         <a
-          href="https://wa.me/905309222322?text=Merhaba%2C%20DRC%20Teknik%20servis%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+          href="https://api.whatsapp.com/send?phone=905309222322&text=Merhaba%2C%20DRC%20Teknik%20servis%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
           target="_blank"
           rel="noopener noreferrer"
           className="rounded-full bg-[#25D366] p-2.5 shadow-lg transition-all duration-300 hover:scale-110"
@@ -69,7 +69,7 @@ const FloatingSocialLinks = () => {
             `}
           >
             <a
-              href="https://wa.me/905309222322?text=Merhaba%2C%20DRC%20Teknik%20servis%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+              href="https://api.whatsapp.com/send?phone=905309222322&text=Merhaba%2C%20DRC%20Teknik%20servis%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-full bg-[#25D366] p-3 lg:p-3.5 shadow-lg transition-all duration-300 hover:scale-110"

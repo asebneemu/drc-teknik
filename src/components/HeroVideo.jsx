@@ -30,7 +30,7 @@ export default function HeroVideo() {
         muted
         playsInline
       >
-        <source src="/video-bg-.mp4" type="video/mp4" />
+        <source src="/bg-6.mp4" type="video/mp4" />
       </video>
     </section>
   );

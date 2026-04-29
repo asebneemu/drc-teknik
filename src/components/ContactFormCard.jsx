@@ -1,28 +1,29 @@
-import { useState } from "react";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const ContactFormCard = () => {
-  const [formData, setFormData] = useState({
-    fullName: "",
-    email: "",
-    message: "",
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
+  const formRef = useRef(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log("Gönderilen form verisi:", formData);
-
-    // Buraya EmailJS / Formspree / backend entegrasyonu gelecek
-    alert("Form gönderimi için mail servisi bağlanacak.");
+    emailjs
+      .sendForm(
+        "service_zub1fdq",
+        "template_qd90tbl",
+        formRef.current,
+        {
+          publicKey: "6S0jFRtADU7Y0rUQ3",
+        }
+      )
+      .then(() => {
+        alert("Mesaj başarıyla gönderildi.");
+        formRef.current.reset();
+      })
+      .catch((error) => {
+        console.error("EmailJS hata:", error);
+        alert("Mesaj gönderilemedi.");
+      });
   };
 
   return (
@@ -41,7 +42,11 @@ const ContactFormCard = () => {
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
+      <form
+        ref={formRef}
+        onSubmit={handleSubmit}
+        className="space-y-3 sm:space-y-4"
+      >
         <div>
           <label
             htmlFor="fullName"
@@ -53,8 +58,6 @@ const ContactFormCard = () => {
             type="text"
             id="fullName"
             name="fullName"
-            value={formData.fullName}
-            onChange={handleChange}
             placeholder="Ad Soyad"
             className="
               w-full rounded-xl border border-gray-300 bg-white
@@ -78,8 +81,6 @@ const ContactFormCard = () => {
             type="email"
             id="email"
             name="email"
-            value={formData.email}
-            onChange={handleChange}
             placeholder="ornek@mail.com"
             className="
               w-full rounded-xl border border-gray-300 bg-white
@@ -102,8 +103,6 @@ const ContactFormCard = () => {
           <textarea
             id="message"
             name="message"
-            value={formData.message}
-            onChange={handleChange}
             placeholder="Mesajınızı buraya yazın..."
             rows="3"
             className="

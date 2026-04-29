@@ -19,7 +19,7 @@ const leftLinks = [
 
 const rightLinks = [
   { label: "Servis Hizmetleri", href: "/hizmetler", icon: IconTool },
-  { label: "Blog", href: "/blog", icon: IconArticle },
+  { label: "Topcon", href: "/tarim", icon: IconArticle },
   { label: "İletişim", href: "/iletisim", icon: IconPhone },
 ];
 
@@ -31,18 +31,27 @@ function NavItem({ item, className = "" }) {
   return (
     <Link
       to={item.href}
-      className={`group flex items-center gap-2 py-3 text-[15px] font-semibold !text-[#f5f1e8] no-underline transition-all duration-300 hover:!text-blue-200 ${className}`}
+      className={`
+        group flex items-center gap-2.5 py-3
+        text-[15px] font-semibold !text-[#f5f1e8] no-underline
+        transition-all duration-300 hover:!text-blue-200
+        ${className}
+      `}
     >
-      <span className="relative !text-[#f5f1e8] tracking-[0.03em]">
+      <Icon
+        size={18}
+        stroke={1.9}
+        className="
+          shrink-0 !text-[#f5f1e8] opacity-85
+          transition-all duration-300
+          group-hover:scale-110 group-hover:opacity-100
+        "
+      />
+
+      <span className="relative leading-tight !text-[#f5f1e8] tracking-[0.02em]">
         {item.label}
         <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-blue-300 transition-all duration-300 group-hover:w-full"></span>
       </span>
-
-      <Icon
-        size={22}
-        stroke={1.8}
-        className="!text-[#f5f1e8] transition-all duration-300 group-hover:translate-x-1 group-hover:scale-110"
-      />
     </Link>
   );
 }

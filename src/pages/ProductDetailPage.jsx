@@ -3,205 +3,116 @@ import agriculture from "../data/agriculture";
 
 const ProductDetailPage = () => {
   const { slug } = useParams();
-
   const item = agriculture.find((product) => product.slug === slug);
 
   if (!item) {
     return (
-      <div className="w-full bg-[#f7f9fc] py-16 sm:py-20">
-        <div className="w-[90%] xl:w-[76%] mx-auto">
-          <div className="rounded-[28px] bg-white p-8 sm:p-10 shadow-sm text-center">
-            <h1 className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-4">
-              Kategori bulunamadı
-            </h1>
-            <p className="text-gray-600 mb-6">
-              Aradığınız ürün grubu bulunamadı.
-            </p>
-            <Link
-              to="/urunler"
-              className="inline-flex items-center rounded-full bg-blue-800 px-5 py-3 text-sm font-semibold text-white transition hover:bg-blue-900"
-            >
-              Ürün Gruplarına Dön
-            </Link>
-          </div>
-        </div>
-      </div>
+      <main className="min-h-screen bg-[#f7f9f6] flex items-center justify-center">
+        <h1 className="text-xl text-[#2f3a2f]">Bulunamadı</h1>
+      </main>
     );
   }
 
   return (
-    <div className="w-full bg-[#f7f9fc] py-12 sm:py-16 lg:py-20">
-      <div className="w-[90%] xl:w-[76%] mx-auto">
-        <div className="mb-8">
-          <Link
-            to="/urunler"
-            className="inline-flex items-center text-sm font-semibold text-blue-800 transition hover:translate-x-1"
-          >
-            ← Ürün Gruplarına Dön
-          </Link>
+    <main className="min-h-screen bg-[#f7f9f6]">
+      <div className="mx-auto max-w-5xl px-6 py-16">
+
+        {/* BACK */}
+        <Link
+          to="/urunler"
+          className="text-sm text-[#6b7b6b] hover:text-[#2f3a2f]"
+        >
+          ← Ürün gruplarına dön
+        </Link>
+
+        {/* HEADER */}
+        <div className="mt-10">
+          <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-[#1f2a1f]">
+            {item.title}
+          </h1>
+
+          {item.subtitle && (
+            <p className="mt-4 text-lg text-[#5f6f5f]">
+              {item.subtitle}
+            </p>
+          )}
         </div>
 
-        <div className="overflow-hidden rounded-[32px] border border-slate-200 bg-white shadow-sm">
-          {item.image ? (
-            <div className="h-[260px] sm:h-[340px] w-full bg-slate-100">
-              <img
-                src={item.image}
-                alt={item.title}
-                className="h-full w-full object-cover"
-              />
-            </div>
-          ) : (
-            <div className="h-[260px] sm:h-[340px] w-full bg-[linear-gradient(135deg,#c7d2fe_0%,#dbeafe_45%,#eff6ff_100%)]" />
-          )}
+        {/* IMAGE */}
+        {item.image && (
+          <div className="mt-12">
+            <img
+              src={item.image}
+              alt={item.title}
+              className="w-full h-[420px] object-cover rounded-2xl"
+            />
+          </div>
+        )}
 
-          <div className="p-6 sm:p-8 lg:p-10">
-            <div className="mb-10">
-              <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
-                {item.title}
-              </h1>
+        {/* DESCRIPTION */}
+        <div className="mt-14 space-y-6">
+          {item.content?.map((p, i) => (
+            <p
+              key={i}
+              className="text-[17px] leading-8 text-[#3f4f3f]"
+            >
+              {p}
+            </p>
+          ))}
+        </div>
 
-              <p className="text-base sm:text-lg font-medium text-slate-500 mb-6">
-                {item.subtitle}
-              </p>
+        {/* TECHNOLOGIES */}
+        {item.products?.length > 0 && (
+          <div className="mt-20">
+            <h2 className="text-2xl font-semibold text-[#1f2a1f]">
+              Teknolojiler
+            </h2>
 
-              <p className="text-gray-600 text-sm sm:text-base leading-7 sm:leading-8">
-                {item.description}
-              </p>
-            </div>
+            <div className="mt-8 space-y-4">
+              {item.products.map((product, i) => (
+                <a
+                  key={i}
+                  href={product.url || "#"}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group block rounded-xl px-5 py-4 transition
+                  hover:bg-[#eef8e8] hover:-translate-y-[1px]"
+                >
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-lg font-medium text-[#1f2a1f]">
+                      {product.name}
+                    </h3>
 
-            <div className="grid grid-cols-1 xl:grid-cols-[1.05fr_0.95fr] gap-8">
-              <div className="space-y-8">
-                <div className="rounded-[24px] border border-slate-200 bg-[#f8fafc] p-5 sm:p-6">
-                  <div className="space-y-4">
-                    {item.content?.map((paragraph, index) => (
-                      <p
-                        key={index}
-                        className="text-gray-600 text-sm sm:text-base leading-7 sm:leading-8"
-                      >
-                        {paragraph}
-                      </p>
-                    ))}
+                    {/* sarı micro accent */}
+                    <span className="text-[#c9a227] opacity-0 group-hover:opacity-100 transition">
+                      →
+                    </span>
                   </div>
-                </div>
 
-                <div className="rounded-[24px] border border-slate-200 bg-white p-5 sm:p-6">
-                  <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                    ⚠️ Kategorinin Önemi
-                  </h2>
-
-                  <p className="text-gray-600 text-sm sm:text-base leading-7 sm:leading-8 mb-4">
-                    {item.importance}
-                  </p>
-
-                  <p className="text-gray-600 text-sm sm:text-base leading-7 sm:leading-8">
-                    {item.operationRole}
-                  </p>
-                </div>
-
-                {item.features && item.features.length > 0 && (
-                  <div className="rounded-[24px] border border-slate-200 bg-white p-5 sm:p-6">
-                    <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-4">
-                      Öne Çıkan Özellikler
-                    </h2>
-
-                    <div className="space-y-3">
-                      {item.features.map((feature, index) => (
-                        <p
-                          key={index}
-                          className="text-gray-600 text-sm sm:text-base leading-7"
-                        >
-                          {feature}
-                        </p>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                {item.usageAreas && item.usageAreas.length > 0 && (
-                  <div className="rounded-[24px] border border-slate-200 bg-white p-5 sm:p-6">
-                    <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-4">
-                      Kullanım Alanları
-                    </h2>
-
-                    <div className="flex flex-wrap gap-2">
-                      {item.usageAreas.map((area, index) => (
-                        <span
-                          key={index}
-                          className="rounded-full bg-blue-50 px-4 py-2 text-sm text-blue-800"
-                        >
-                          {area}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                <div className="rounded-[24px] border border-slate-200 bg-white p-5 sm:p-6">
-                  <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                    📊 Genel Perspektif
-                  </h2>
-
-                  <p className="text-gray-600 text-sm sm:text-base leading-7 sm:leading-8 mb-4">
-                    {item.evaluation}
-                  </p>
-
-                  <p className="text-gray-600 text-sm sm:text-base leading-7 sm:leading-8">
-                    {item.evaluation2}
-                  </p>
-                </div>
-              </div>
-
-              <div>
-                <div className="rounded-[24px] border border-slate-200 bg-white p-5 sm:p-6">
-                  <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-4">
-                    Teknolojiler
-                  </h2>
-
-                  <div className="space-y-3">
-                    {item.products.map((product, index) => (
-                      <a
-                        key={`${product.name}-${index}`}
-                        href={product.url || "#"}
-                        target="_blank"
-                        rel="noreferrer"
-                        className={`block rounded-2xl border border-slate-200 bg-[#f8fafc] p-4 sm:p-5 transition ${
-                          product.url
-                            ? "hover:border-blue-300 hover:bg-blue-50"
-                            : "cursor-default"
-                        }`}
-                      >
-                        <div>
-                          <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-1">
-                            {product.name}
-                          </h3>
-
-                          {product.note && (
-                            <p className="text-sm sm:text-base text-gray-600 leading-7">
-                              {product.note}
-                            </p>
-                          )}
-                        </div>
-                      </a>
-                    ))}
-                  </div>
-                </div>
-
-                {item.extraInfo && (
-                  <div className="mt-6 rounded-[24px] bg-[#f8fafc] p-5 sm:p-6 border border-slate-200">
-                    <h2 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3 flex items-center gap-2">
-                      ➕ Ek Not
-                    </h2>
-                    <p className="text-sm sm:text-base leading-7 sm:leading-8 text-gray-600">
-                      {item.extraInfo}
+                  {product.note && (
+                    <p className="mt-2 text-sm leading-7 text-[#5f6f5f]">
+                      {product.note}
                     </p>
-                  </div>
-                )}
-              </div>
+                  )}
+
+                  {/* alt çizgi hover */}
+                  <div className="mt-3 h-[1px] w-0 bg-[#e6d28f] transition-all duration-300 group-hover:w-full" />
+                </a>
+              ))}
             </div>
           </div>
+        )}
+
+        {/* FOOTNOTE */}
+        <div className="mt-20 pt-10 border-t border-[#e3eadf]">
+          <p className="text-sm leading-7 text-[#6b7b6b]">
+            {item.closingNote ||
+              `${item.title} alanında kullanılan sistemler, saha doğruluğunu ve operasyon kalitesini doğrudan etkiler. Bu nedenle teknoloji seçimi yalnızca cihaz bazlı değil, bütün çalışma yapısı içinde değerlendirilmelidir.`}
+          </p>
         </div>
+
       </div>
-    </div>
+    </main>
   );
 };
 

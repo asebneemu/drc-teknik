@@ -24,7 +24,7 @@ export default function App() {
         <Route path="/kurumsal" element={<AboutUsPage />} />
         <Route path="/urunler" element={<ProductsPage />} />
         <Route path="/urunler/:slug" element={<ProductDetailPage />} />
-        <Route path="/hizmetler" element={<ServicesPage />} />
+        <Route path="/hizmetler/*" element={<ServicesPage />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/:slug" element={<BlogDetailPage />} />
         <Route path="/iletisim" element={<ContactPage />} />

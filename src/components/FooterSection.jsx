@@ -123,11 +123,6 @@ DRC Teknik, Topcon Agriculture ürünleri için yetkili servis merkezi olarak, t
                 </Link>
               </li>
               <li>
-                <Link to="/blog" onClick={goTop} className="transition hover:text-white">
-                  Blog
-                </Link>
-              </li>
-              <li>
                 <Link to="/iletisim" onClick={goTop} className="transition hover:text-white">
                   İletişim
                 </Link>
@@ -143,25 +138,40 @@ DRC Teknik, Topcon Agriculture ürünleri için yetkili servis merkezi olarak, t
             </h3>
 
             <ul className="space-y-3 sm:space-y-4 text-sm sm:text-base text-white/80">
-              <li>
-                <Link to="/yetkili-servis" onClick={goTop} className="transition hover:text-white">
-                  Yetkili Servis
+                          <li>
+                <Link to="/tarim" onClick={goTop} className="transition hover:text-white">
+                  Topcon
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/bakim-onarim-kalibrasyon"
-                  onClick={goTop}
-                  className="transition hover:text-white"
-                >
-                  Bakım Onarım Kalibrasyon
-                </Link>
-              </li>
-              <li>
-                <Link to="/teknik-servis" onClick={goTop} className="transition hover:text-white">
-                  Teknik Servis
-                </Link>
-              </li>
+  <Link
+    to="/hizmetler/yetkili-servis"
+    onClick={goTop}
+    className="transition hover:text-white"
+  >
+    Yetkili Servis
+  </Link>
+</li>
+
+<li>
+  <Link
+    to="/hizmetler/kalibrasyon"
+    onClick={goTop}
+    className="transition hover:text-white"
+  >
+    Kalibrasyon
+  </Link>
+</li>
+
+<li>
+  <Link
+    to="/hizmetler/teknik-servis"
+    onClick={goTop}
+    className="transition hover:text-white"
+  >
+    Teknik Servis
+  </Link>
+</li>
             </ul>
           </div>
 

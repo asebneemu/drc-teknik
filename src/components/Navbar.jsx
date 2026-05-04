@@ -18,7 +18,7 @@ const leftLinks = [
 ];
 
 const rightLinks = [
-  { label: "Servis Hizmetleri", href: "/hizmetler", icon: IconTool },
+  { label: "Hizmetler", href: "/hizmetler", icon: IconTool },
   { label: "Topcon", href: "/tarim", icon: IconArticle },
   { label: "İletişim", href: "/iletisim", icon: IconPhone },
 ];
